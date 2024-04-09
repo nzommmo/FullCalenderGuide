@@ -1,5 +1,12 @@
 # FullCalenderGuide
 A simple tutorial guide to add  a calendar to you web applications and perform CRUD operations such as add event,delete event and reschedule event using PHP.
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ## Installation
 1.Install the Fullcalender core package and any plugins :
@@ -45,3 +52,6 @@ c. Create a div with an id of "calender" as specified in the DOM Loading Script.
 4. Setup your files to match the PHP files provided.<br>
 5. Once all steps are followed you should be able to add,delete and update an event.
 
+## Features
+1.Dynamic calender view.<br>
+2.Calender CRUD operations.
