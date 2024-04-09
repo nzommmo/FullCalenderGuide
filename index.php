@@ -45,7 +45,28 @@ echo "<script>const events = " . json_encode($calendar_events) . ";</script>";
 <body>
 <div class="container mt-5">
     <h1>Calendar with Events</h1>
-    <!-- Other HTML content here -->
+    <!-- ADD EVENTS -->
+    <form action="add_event.php" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Event Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+                <label for="start_datetime" class="form-label">Start Date and Time</label>
+                <input type="datetime-local" class="form-control" id="start_datetime" name="start_datetime" required>
+            </div>
+            <div class="mb-3">
+                <label for="end_datetime" class="form-label">End Date and Time</label>
+                <input type="datetime-local" class="form-control" id="end_datetime" name="end_datetime" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
 
     <div id='calendar'></div>
 

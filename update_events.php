@@ -1,4 +1,5 @@
 <?php
+
 session_start(); // Start the session
 
 include_once "config.php";
@@ -8,7 +9,7 @@ if (isset($_SESSION['event_id'])) {
     $event_id = $_SESSION['event_id'];
 
     // Fetch event details from the database based on event ID
-    $sql = "SELECT * FROM scheduled WHERE id = '$event_id'";
+    $sql = "SELECT * FROM scheduled ";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -28,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['event_id'])) {
     $end_datetime = $_POST['end_datetime'];
     $description = $_POST['description'];
 
+  
     // Update event in the database
     $sql = "UPDATE scheduled SET 
             title = '$title', 
@@ -42,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['event_id'])) {
         echo "Error updating event: " . $conn->error;
     }
 }
+// After verifying form submission
 
 $conn->close();
 ?>
@@ -79,6 +82,9 @@ $conn->close();
       <button type="submit" class="btn btn-primary">Update Event</button>
     </form>
   </div>
+  <script>
+    
+  </script>
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
